@@ -100,3 +100,60 @@ def append():  # add next item to the list
         error1 = Label(root, text="Only Numbers", fg="red").grid(column=4, row=4)
 
 
+def delete():
+
+
+    #global values used
+    global item_details, entry1, entry2, entry3, entry4, entry5, total_entries, row_count, error1, error2, error3
+    #find which row is to be deleted and delete it
+    if entry5.get() == "":
+
+            #destroying any error messages
+            for obj in root.grid_slaves(row=5, column=4):
+                obj.destroy()
+
+            #error message if there is no value in row number
+            error3 = Label(root, text="Please enter a row number", fg="red").grid(column=4, row=5)
+
+    elif check(entry5.get(), int):
+
+        if int(entry5.get()) + 1 > row_count:
+            
+            #destroying any error messages
+            for obj in root.grid_slaves(row=5, column=4):
+                    obj.destroy()
+
+                    # error message if the value entered in row number does not exist
+            error3 = Label(root, text="Please enter a valid number", fg="red").grid(column=4, row=5)
+
+        else:
+
+            #destroying any error messages
+            for obj in root.grid_slaves(row=5, column=4):
+                    obj.destroy()
+
+                  
+            selectedrow = int(entry5.get())
+            total_entries -= 1
+            row_count -= 1
+            entry5.delete(0,'end')
+            #clear the last item displayed on the GUI
+            Label(root, text="                                  ").grid(column=0,row=selectedrow+9) 
+            Label(root, text="                                  ").grid(column=1,row=selectedrow+9)
+            Label(root, text="                                  ").grid(column=2,row=selectedrow+9)
+            Label(root, text="                                  ").grid(column=3,row=selectedrow+9)
+            Label(root, text="                                  ").grid(column=4,row=selectedrow+9)
+            #print all the items in the list
+            del item_details[selectedrow]
+            print()
+
+    
+    else:
+            #destroying any error messages
+            for obj in root.grid_slaves(row=5, column=4):
+                obj.destroy()
+
+                #error message if the value entered in row number is not an integer
+                error3 = Label(root, text="Please enter a number", fg="red").grid(column=4, row=5)
+
+
