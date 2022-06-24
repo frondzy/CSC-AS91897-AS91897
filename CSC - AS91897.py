@@ -46,6 +46,17 @@ def check(data, data_type):
     except ValueError:
         return False
 
+# adding the next item to the list 
+def append():
+    global item_details, entry1, entry2, entry3, entry4, entry5, total_entries, row_count, error1, error2, error3
+    if len(entry1.get()) !=0 and len(entry2.get()) !=0 and len(entry3.get()) !=0 and len(entry4.get()) !=0 and check(entry2.get(), int) and check(entry4.get(),int):
+        if 1 <= int(entry4.get()) <=500:
+            item_details.append([entry1.get(), entry2.get(), entry3.get(), entry4.get()])
+            entry1.delete(0, 'end')
+            entry2.delete(0, 'end')
+            entry3.delete(0, 'end')
+            entry4.delete(0, 'end')
+            total_entries += 1 
 
 
 
