@@ -173,4 +173,46 @@ label10 = Label(root,text="  |  Item Hired  |  ", font="serif 10 italic")
 label0 = Label(root,text="  |  Number of Items  |  ", font="serif 10 italic")
 
 
+#All the entry fields on the grid
+entry1 = Entry(root, width="40")#customer name
+entry2 = Entry(root, width="40")#receipt number
+entry3 = Entry(root, width="40")#item hired
+entry4 = Entry(root, width="40")#number of items
+entry5 = Entry(root, width="40")#row number
 
+#Buttons placed here
+button1 = Button(root, text="Append Details", padx = 15, pady = 10, command = append, bg="green")
+button2 = Button(root, text="Print Row", padx = 25, pady = 10, command = print, bg="green")
+button3 = Button(root, text="Delete Row", padx = 20, pady = 10, command = delete, bg="red")
+button4 = Button(root, text="Exit", padx = 30, pady = 10, command = quit, fg="red")
+
+
+#labels placed on the grid
+label_title.grid(column=1, row=0, columnspan=3)
+label_name.grid(column=0, row=1)
+label_receipt.grid(column=0, row=2)
+label_item.grid(column=0, row=3)
+label_itemno.grid(column=0, row=4)
+label_rowno.grid(column=0, row=5)
+
+label7.grid(column=0, row=8)
+label8.grid(column=1, row=8)
+label9.grid(column=2, row=8)
+label10.grid(column=3, row=8)
+label0.grid(column=4, row=8)
+
+# Entry field placed on the grid
+entry1.grid(column=1, row=1, columnspan=3)
+entry2.grid(column=1, row=2, columnspan=3)
+entry3.grid(column=1, row=3, columnspan=3)
+entry4.grid(column=1, row=4, columnspan=3)
+entry5.grid(column=1, row=5, columnspan=3)
+
+#Button placed on the grid
+button1.grid(column=0, row=7)
+button2.grid(column=1, row=7)
+button3.grid(column=2, row=7)
+button4.grid(column=4, row=7)
+
+
+root.mainloop()
