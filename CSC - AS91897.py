@@ -157,3 +157,20 @@ def delete():
                 error3 = Label(root, text="Please enter a number", fg="red").grid(column=4, row=5)
 
 
+#All the labels formed here
+label_title = Label(root, text = "Julie's Party Hire", font="serif 35 bold")
+label_name = Label(root, text = "Customer Name", font="serif 10 bold")
+label_receipt = Label(root, text = "Receipt Number", font="serif 10 bold")
+label_item = Label(root, text = "Item Hired", font="serif 10 bold")
+label_itemno = Label(root, text = "Number of Items", font="serif 10 bold")
+label_rowno = Label(root, text = "Row Number", font="serif 10 bold")
+
+
+label7 = Label(root, text="  |  Row  |  ", font="serif 10 italic")
+label8 = Label(root, text="  |  Customer Names  |  ", font="serif 10 italic")
+label9 = Label(root, text="  |  Reciept Number  |  ", font="serif 10 italic")
+label10 = Label(root,text="  |  Item Hired  |  ", font="serif 10 italic")
+label0 = Label(root,text="  |  Number of Items  |  ", font="serif 10 italic")
+
+
+
