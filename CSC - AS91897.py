@@ -38,6 +38,14 @@ def print():
 def quit(): 
     root.destroy()
 
+# creating a fucntion which checks if the entered value is a integer
+def check(data, data_type):
+    try:
+        data_type(data)
+        return True
+    except ValueError:
+        return False
+
 
 
 
